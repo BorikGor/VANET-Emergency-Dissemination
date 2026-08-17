@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-05-15T15:44:49.231116+12:00 by Eclipse SUMO netedit 1.26.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="vehicle_flow_01" begin="0.00" number="3" perHour="120.00" route="loop_route_01"/>
+    <flow id="vehicle_flow_02" begin="0.00" number="3" perHour="120.00" route="loop_route_02"/>
+    <flow id="vehicle_flow_03" begin="0.00" number="3" perHour="120.00" color="red" route="loop_route_03"/>
+    <flow id="vehicle_flow_04" begin="0.00" number="3" perHour="120.00" color="0,0,128" route="loop_route_04"/>
+    <flow id="vehicle_flow_05" begin="0.00" number="3" perHour="120.00" color="magenta" route="loop_route_05"/>
+    <flow id="vehicle_flow_06" begin="0.00" number="3" perHour="120.00" color="128,0,0" route="loop_route_06"/>
+    <flow id="vehicle_flow_07" begin="0.00" number="3" perHour="120.00" color="0,128,0" route="loop_route_07"/>
+    <flow id="vehicle_flow_08" begin="0.00" number="3" perHour="120.00" color="128,128,0" route="loop_route_08"/>
+    <flow id="vehicle_flow_09" begin="0.00" number="3" perHour="120.00" color="128,128,0" route="loop_route_09"/>
+    <flow id="vehicle_flow_10" begin="0.00" number="3" perHour="120.00" color="128,0,128" route="loop_route_10"/>
+</routes>

@@ -1,0 +1,494 @@
+================================================== 
+Batch run started: 22/05/2026  9:15:04.23
+Working dir: C:\Users\Boris\Documents\AUT\Project\Logs\Urban
+==================================================
+
+--------------------------------------------------
+FILE: Urban_BGKP_10_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   2070
+Delivered: 1362
+PDR:       0.6580
+EMG:       create=58 rx=40
+EMG latency (ms): t50=86 t90=282 t99=415
+Latency (ms): avg=14618.5 p50=12788.5 p90=31746.3 min=0 max=64109
+TX total: mbl=73046 rsu=21232 all=94278
+Overhead (TX/delivered): 69.22
+TX breakdown (MBL): d=64887 a=2049 q=5700 e=410
+TX breakdown (RSU): a=21183 e=49
+BUF: avg_last=6.26 max_seen=16 put=9141 rm=20061 ev=1610
+
+--------------------------------------------------
+FILE: Urban_BGKP_20_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   5672
+Delivered: 2583
+PDR:       0.4554
+EMG:       create=136 rx=214
+EMG latency (ms): t50=140 t90=399 t99=641
+Latency (ms): avg=9990.5 p50=5086.0 p90=26281.4 min=0 max=112734
+TX total: mbl=175365 rsu=49668 all=225033
+Overhead (TX/delivered): 87.12
+TX breakdown (MBL): d=146546 a=15356 q=11400 e=2063
+TX breakdown (RSU): a=49535 e=133
+BUF: avg_last=9.06 max_seen=16 put=18610 rm=33978 ev=5239
+
+--------------------------------------------------
+FILE: Urban_BGKP_30_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   9660
+Delivered: 4416
+PDR:       0.4571
+EMG:       create=217 rx=417
+EMG latency (ms): t50=172 t90=593 t99=1047
+Latency (ms): avg=9684.0 p50=797.0 p90=29304.5 min=0 max=132125
+TX total: mbl=281795 rsu=82041 all=363836
+Overhead (TX/delivered): 82.39
+TX breakdown (MBL): d=226806 a=33856 q=17101 e=4032
+TX breakdown (RSU): a=81796 e=245
+BUF: avg_last=10.59 max_seen=16 put=28389 rm=45207 ev=8885
+
+--------------------------------------------------
+FILE: Urban_BGKP_40_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   13446
+Delivered: 6195
+PDR:       0.4607
+EMG:       create=269 rx=564
+EMG latency (ms): t50=218 t90=579 t99=1453
+Latency (ms): avg=8602.5 p50=726.0 p90=25652.6 min=0 max=165422
+TX total: mbl=441711 rsu=108686 all=550397
+Overhead (TX/delivered): 88.85
+TX breakdown (MBL): d=354779 a=57720 q=22808 e=6404
+TX breakdown (RSU): a=108320 e=366
+BUF: avg_last=11.24 max_seen=16 put=39210 rm=52141 ev=14248
+
+--------------------------------------------------
+FILE: Urban_BGKP_50_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   17270
+Delivered: 7796
+PDR:       0.4514
+EMG:       create=336 rx=696
+EMG latency (ms): t50=235 t90=641 t99=1227
+Latency (ms): avg=8017.3 p50=688.0 p90=25410.0 min=0 max=93352
+TX total: mbl=593748 rsu=126475 all=720223
+Overhead (TX/delivered): 92.38
+TX breakdown (MBL): d=471687 a=84913 q=28515 e=8633
+TX breakdown (RSU): a=126048 e=427
+BUF: avg_last=12.06 max_seen=16 put=49547 rm=57030 ev=20288
+
+--------------------------------------------------
+FILE: Urban_BGKP_60_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   21462
+Delivered: 9224
+PDR:       0.4298
+EMG:       create=396 rx=1035
+EMG latency (ms): t50=266 t90=679 t99=1383
+Latency (ms): avg=7344.1 p50=664.0 p90=23614.9 min=0 max=171156
+TX total: mbl=745135 rsu=127080 all=872215
+Overhead (TX/delivered): 94.56
+TX breakdown (MBL): d=576468 a=121422 q=34216 e=13029
+TX breakdown (RSU): a=126477 e=603
+BUF: avg_last=12.88 max_seen=16 put=60365 rm=56892 ev=29419
+
+--------------------------------------------------
+FILE: Urban_BGKP_70_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   26309
+Delivered: 11930
+PDR:       0.4535
+EMG:       create=440 rx=1290
+EMG latency (ms): t50=328 t90=1226 t99=2250
+Latency (ms): avg=6030.4 p50=617.0 p90=20781.8 min=0 max=169836
+TX total: mbl=879026 rsu=118441 all=997467
+Overhead (TX/delivered): 83.61
+TX breakdown (MBL): d=631935 a=193678 q=39912 e=13501
+TX breakdown (RSU): a=117817 e=624
+BUF: avg_last=13.74 max_seen=16 put=68127 rm=49371 ev=39519
+
+--------------------------------------------------
+FILE: Urban_BGKP_80_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   30256
+Delivered: 12979
+PDR:       0.4290
+EMG:       create=597 rx=1963
+EMG latency (ms): t50=336 t90=898 t99=2539
+Latency (ms): avg=6424.4 p50=656.0 p90=21879.6 min=0 max=114883
+TX total: mbl=1023717 rsu=134075 all=1157792
+Overhead (TX/delivered): 89.21
+TX breakdown (MBL): d=747700 a=207922 q=45628 e=22467
+TX breakdown (RSU): a=133113 e=962
+BUF: avg_last=13.96 max_seen=16 put=79929 rm=54064 ev=47382
+
+--------------------------------------------------
+FILE: Urban_BGKP_90_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_BGKP_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   36105
+Delivered: 15411
+PDR:       0.4268
+EMG:       create=490 rx=2144
+EMG latency (ms): t50=453 t90=1296 t99=3687
+Latency (ms): avg=5303.4 p50=750.0 p90=19632.0 min=0 max=109859
+TX total: mbl=1116422 rsu=109537 all=1225959
+Overhead (TX/delivered): 79.55
+TX breakdown (MBL): d=685283 a=364197 q=51313 e=15629
+TX breakdown (RSU): a=108889 e=648
+BUF: avg_last=14.53 max_seen=16 put=81167 rm=41822 ev=55315
+
+--------------------------------------------------
+FILE: Urban_DUMB_10_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   8974
+Delivered: 3430
+PDR:       0.3822
+EMG:       create=55 rx=42
+EMG latency (ms): t50=78 t90=336 t99=578
+Latency (ms): avg=285.4 p50=258.0 p90=515.1 min=0 max=758
+TX total: mbl=16770 rsu=12810 all=29580
+Overhead (TX/delivered): 8.62
+TX breakdown (MBL): d=10874 a=63 q=5700 e=133
+TX breakdown (RSU): a=12775 e=35
+BUF: avg_last=0.00 max_seen=0 put=0 rm=12657 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_20_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   14853
+Delivered: 4266
+PDR:       0.2872
+EMG:       create=134 rx=216
+EMG latency (ms): t50=110 t90=375 t99=672
+Latency (ms): avg=354.2 p50=281.0 p90=687.0 min=0 max=1094
+TX total: mbl=26539 rsu=17259 all=43798
+Overhead (TX/delivered): 10.27
+TX breakdown (MBL): d=14221 a=380 q=11400 e=538
+TX breakdown (RSU): a=17171 e=88
+BUF: avg_last=0.00 max_seen=0 put=0 rm=14414 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_30_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   20378
+Delivered: 4296
+PDR:       0.2108
+EMG:       create=197 rx=374
+EMG latency (ms): t50=117 t90=523 t99=914
+Latency (ms): avg=330.6 p50=281.0 p90=632.0 min=0 max=1000
+TX total: mbl=35124 rsu=22180 all=57304
+Overhead (TX/delivered): 13.34
+TX breakdown (MBL): d=16406 a=704 q=17100 e=914
+TX breakdown (RSU): a=22041 e=139
+BUF: avg_last=0.00 max_seen=0 put=0 rm=16359 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_40_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   25471
+Delivered: 4712
+PDR:       0.1850
+EMG:       create=253 rx=610
+EMG latency (ms): t50=148 t90=492 t99=781
+Latency (ms): avg=334.4 p50=290.0 p90=648.0 min=0 max=1321
+TX total: mbl=42619 rsu=26328 all=68947
+Overhead (TX/delivered): 14.63
+TX breakdown (MBL): d=17127 a=1311 q=22809 e=1372
+TX breakdown (RSU): a=26147 e=181
+BUF: avg_last=0.00 max_seen=0 put=0 rm=17308 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_50_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   30884
+Delivered: 5902
+PDR:       0.1911
+EMG:       create=306 rx=706
+EMG latency (ms): t50=141 t90=531 t99=820
+Latency (ms): avg=334.1 p50=282.0 p90=680.0 min=0 max=1250
+TX total: mbl=51160 rsu=31008 all=82168
+Overhead (TX/delivered): 13.92
+TX breakdown (MBL): d=19199 a=1817 q=28516 e=1628
+TX breakdown (RSU): a=30786 e=222
+BUF: avg_last=0.00 max_seen=0 put=0 rm=18976 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_60_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   36402
+Delivered: 6083
+PDR:       0.1671
+EMG:       create=345 rx=966
+EMG latency (ms): t50=187 t90=563 t99=929
+Latency (ms): avg=313.4 p50=265.0 p90=633.0 min=0 max=1304
+TX total: mbl=60541 rsu=35624 all=96165
+Overhead (TX/delivered): 15.81
+TX breakdown (MBL): d=21619 a=2549 q=34228 e=2145
+TX breakdown (RSU): a=35372 e=252
+BUF: avg_last=0.00 max_seen=0 put=0 rm=20835 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_70_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   43871
+Delivered: 8674
+PDR:       0.1977
+EMG:       create=384 rx=1299
+EMG latency (ms): t50=171 t90=633 t99=968
+Latency (ms): avg=305.7 p50=258.0 p90=648.0 min=0 max=1649
+TX total: mbl=75909 rsu=46693 all=122602
+Overhead (TX/delivered): 14.13
+TX breakdown (MBL): d=29407 a=3731 q=39939 e=2832
+TX breakdown (RSU): a=46404 e=289
+BUF: avg_last=0.00 max_seen=0 put=0 rm=27103 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_80_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   49948
+Delivered: 9251
+PDR:       0.1852
+EMG:       create=523 rx=1978
+EMG latency (ms): t50=211 t90=641 t99=977
+Latency (ms): avg=306.0 p50=258.0 p90=633.0 min=0 max=1421
+TX total: mbl=88284 rsu=50503 all=138787
+Overhead (TX/delivered): 15.00
+TX breakdown (MBL): d=32794 a=5529 q=45657 e=4304
+TX breakdown (RSU): a=50095 e=408
+BUF: avg_last=0.00 max_seen=0 put=0 rm=30126 ev=0
+
+--------------------------------------------------
+FILE: Urban_DUMB_90_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_DUMB_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   55554
+Delivered: 10244
+PDR:       0.1844
+EMG:       create=440 rx=2076
+EMG latency (ms): t50=211 t90=602 t99=914
+Latency (ms): avg=340.1 p50=289.0 p90=687.0 min=0 max=2320
+TX total: mbl=97624 rsu=58553 all=156177
+Overhead (TX/delivered): 15.25
+TX breakdown (MBL): d=35725 a=6264 q=51373 e=4262
+TX breakdown (RSU): a=58238 e=315
+BUF: avg_last=0.00 max_seen=0 put=0 rm=30011 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_10_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   4760
+Delivered: 1470
+PDR:       0.3088
+EMG:       create=55 rx=30
+EMG latency (ms): t50=250 t90=312 t99=414
+Latency (ms): avg=260.4 p50=234.0 p90=492.0 min=0 max=750
+TX total: mbl=8232 rsu=0 all=8232
+Overhead (TX/delivered): 5.60
+TX breakdown (MBL): d=8145 a=0 q=0 e=87
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_20_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   9525
+Delivered: 3488
+PDR:       0.3662
+EMG:       create=127 rx=282
+EMG latency (ms): t50=226 t90=367 t99=484
+Latency (ms): avg=301.5 p50=258.0 p90=641.0 min=0 max=1961
+TX total: mbl=34020 rsu=0 all=34020
+Overhead (TX/delivered): 9.75
+TX breakdown (MBL): d=33616 a=0 q=0 e=404
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_30_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   14295
+Delivered: 4746
+PDR:       0.3320
+EMG:       create=184 rx=716
+EMG latency (ms): t50=164 t90=445 t99=890
+Latency (ms): avg=299.9 p50=242.0 p90=641.0 min=0 max=1930
+TX total: mbl=77900 rsu=0 all=77900
+Overhead (TX/delivered): 16.41
+TX breakdown (MBL): d=77014 a=0 q=0 e=886
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_40_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   19065
+Delivered: 6423
+PDR:       0.3369
+EMG:       create=242 rx=1571
+EMG latency (ms): t50=117 t90=312 t99=515
+Latency (ms): avg=305.4 p50=258.0 p90=631.4 min=0 max=8711
+TX total: mbl=143529 rsu=0 all=143529
+Overhead (TX/delivered): 22.35
+TX breakdown (MBL): d=141780 a=0 q=0 e=1749
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_50_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   23835
+Delivered: 7971
+PDR:       0.3344
+EMG:       create=433 rx=5051
+EMG latency (ms): t50=54 t90=242 t99=500
+Latency (ms): avg=282.7 p50=234.0 p90=578.0 min=0 max=1977
+TX total: mbl=252699 rsu=0 all=252699
+Overhead (TX/delivered): 31.70
+TX breakdown (MBL): d=247554 a=0 q=0 e=5145
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_60_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   28605
+Delivered: 9741
+PDR:       0.3405
+EMG:       create=367 rx=5161
+EMG latency (ms): t50=47 t90=243 t99=812
+Latency (ms): avg=313.7 p50=258.0 p90=656.0 min=0 max=1586
+TX total: mbl=365254 rsu=0 all=365254
+Overhead (TX/delivered): 37.50
+TX breakdown (MBL): d=359900 a=0 q=0 e=5354
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_70_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   33375
+Delivered: 11180
+PDR:       0.3350
+EMG:       create=393 rx=6673
+EMG latency (ms): t50=47 t90=328 t99=742
+Latency (ms): avg=355.6 p50=304.0 p90=719.0 min=0 max=4344
+TX total: mbl=523733 rsu=0 all=523733
+Overhead (TX/delivered): 46.85
+TX breakdown (MBL): d=516880 a=0 q=0 e=6853
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_80_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   38151
+Delivered: 12935
+PDR:       0.3390
+EMG:       create=566 rx=12415
+EMG latency (ms): t50=54 t90=257 t99=555
+Latency (ms): avg=366.8 p50=320.0 p90=734.0 min=0 max=1640
+TX total: mbl=690920 rsu=0 all=690920
+Overhead (TX/delivered): 53.41
+TX breakdown (MBL): d=678184 a=0 q=0 e=12736
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Urban_FLUD_90_output.txt
+TIME: 22/05/2026  9:15:04.28
+CMD : python metrics_parser.py "Urban_FLUD_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   42931
+Delivered: 14845
+PDR:       0.3458
+EMG:       create=486 rx=11688
+EMG latency (ms): t50=47 t90=304 t99=609
+Latency (ms): avg=462.1 p50=398.0 p90=953.0 min=0 max=2430
+TX total: mbl=898858 rsu=0 all=898858
+Overhead (TX/delivered): 60.55
+TX breakdown (MBL): d=887262 a=0 q=0 e=11596
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+==================================================
+Batch run finished: 22/05/2026  9:15:19.04
+==================================================

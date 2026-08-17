@@ -1,0 +1,410 @@
+BGKP SYSTEM DESIGN
+Version 1.4
+
+1. DOCUMENT PURPOSE
+
+This document describes the latest evaluated version of the Bounded
+Gossip-Based Kernel Protocol (BGKP). BGKP supports periodic vehicle data
+collection and state-based emergency dissemination in fragmented
+Vehicular Ad Hoc Networks (VANETs).
+
+The implementation targets Contiki-NG. The evaluated simulation version
+runs on Sky motes in Cooja, and a preliminary hardware port runs on TI
+SimpleLink CC1352R LaunchPad boards.
+
+BGKP is the proposed protocol. FLUD and DUMB are separate baseline
+implementations used for comparative evaluation and are not variants of
+BGKP.
+
+
+2. SYSTEM CONTEXT
+
+The system contains two node roles:
+
+Mobile node
+    Represents a vehicle. It obtains location and simulation time through
+    a UART-based REQ_LOC/LOC interface, generates periodic DATA records,
+    detects harsh braking, exchanges messages with nearby mobile nodes,
+    stores records during disconnection, and delivers buffered records to
+    an RSU when contact becomes available.
+
+Roadside Unit (RSU)
+    Acts as an intermittent infrastructure access point and data sink. It
+    acknowledges received messages and provides limited local support for
+    emergency awareness. The RSU does not perform route discovery,
+    backend aggregation, or global coordination.
+
+Communication uses IPv6/6LoWPAN and UDP over IEEE 802.15.4. Nodes make
+protocol decisions using local state only. Persistent end-to-end paths
+and continuous RSU coverage are not assumed.
+
+
+3. DESIGN OBJECTIVES
+
+The design objectives are:
+
+1. Support emergency awareness under high mobility and intermittent
+   connectivity.
+2. Preserve periodic vehicle data during disconnection through bounded
+   store-carry-forward buffering.
+3. Keep retransmission, local state, and memory consumption explicitly
+   bounded.
+4. Operate on resource-constrained embedded platforms.
+5. Provide observable protocol events for repeatable simulation and
+   post-processing.
+6. Degrade predictably as connectivity worsens rather than relying on
+   persistent routes or unlimited storage.
+
+BGKP is a trade-off design. It is not presented as universally superior
+in delivery latency, emergency convergence, or communication overhead.
+
+
+4. NODE OPERATION
+
+4.1 Mobile-node cycle
+
+A mobile node repeatedly performs the following activities:
+
+1. Requests location and timestamp data through UART.
+2. Updates position, speed, and direction estimates.
+3. Detects a harsh-braking condition from the change in speed.
+4. Sends QUERY messages to discover nearby RSUs and exchange emergency
+   awareness state.
+5. Generates periodic DATA messages.
+6. Uses bounded gossip and acknowledgement feedback when operating
+   without direct RSU delivery.
+7. Stores undelivered records in a bounded carry buffer.
+8. Flushes buffered records to an RSU when RSU contact becomes available.
+9. Processes received DATA, EMERGENCY, QUERY, and ACK messages.
+10. Emits structured METR records when metric logging is enabled.
+
+4.2 RSU operation
+
+An RSU:
+
+1. Receives QUERY, DATA, and EMERGENCY messages.
+2. Returns acknowledgements containing the metadata required to identify
+   the acknowledged message.
+3. Accepts direct and carried DATA records for metric extraction.
+4. Locally rebroadcasts a newly received emergency once, subject to the
+   implementation's duplicate-control behaviour.
+5. Includes current emergency awareness in acknowledgements where
+   supported by the current message payload.
+
+The RSU does not originate periodic vehicle data and does not maintain a
+network-wide route or global view.
+
+
+5. MESSAGE MODEL
+
+5.1 Common frame
+
+All BGKP messages use a common serialized frame with the following
+logical fields:
+
+Field               Description
+------------------  -----------------------------------------------
+Signature           Four-byte ASCII protocol identifier: "BGKP"
+Length              Three-byte encoded body length
+Marker              Three-byte role marker: "Mbl" or "RSU"
+Sender ID           Physical transmitter identifier
+Message type        QUERY, ACK, DATA, or EMERGENCY
+Message ID          Identifier assigned by the originating node
+Target ID           Intended recipient or broadcast value
+Origin ID           Original message creator
+Payload             Message-specific payload
+Timestamp           Creation time in milliseconds
+Checksum            Chk8, the low byte of the frame-byte sum
+
+Multi-byte frame metadata is serialized explicitly by the BGKP pack and
+parse layer. Payload fields must be interpreted according to the current
+structures in bgkp_protocol.h rather than the obsolete payload layouts
+from earlier WSAN documents.
+
+5.2 Message types
+
+Value  Name       Purpose
+-----  ---------  --------------------------------------------------
+0      QUERY      Presence, RSU discovery, and emergency-state exchange
+1      ACK        Reception confirmation with acknowledged metadata
+2      DATA       Periodic mobility data and dissemination metadata
+4      EMERGENCY  Harsh-braking notification and mobility context
+
+5.3 DATA payload
+
+The current DATA payload contains the originating node's mobility state
+and dissemination metadata, including:
+
+- x and y position in decimetres;
+- speed in decimetres per second;
+- direction code;
+- RSSI field;
+- two preferred-peer identifiers;
+- DATA hop budget (TTL).
+
+The originating mobility metrics remain unchanged when a DATA message is
+forwarded. The physical Sender ID and remaining hop budget may change at
+each forwarding step.
+
+5.4 QUERY payload
+
+QUERY messages carry compact emergency-awareness information where
+supported by the current implementation. This allows an arriving node to
+learn that an emergency state is active even when it did not receive the
+original emergency broadcast.
+
+5.5 ACK payload
+
+ACK messages identify the acknowledged message using its type, origin,
+and message identifier. ACK observations are also used by BGKP's
+preferred-peer mechanism.
+
+5.6 EMERGENCY payload
+
+The current harsh-braking payload begins with the "EFBR" marker and
+contains:
+
+- emergency code;
+- x and y position;
+- speed;
+- direction.
+
+Emergency awareness is state based. The source transmits bounded updates
+while the condition remains active. Receivers retain the state for a
+bounded lifetime and remove it after expiry if no newer update arrives.
+The latest mobile implementation therefore uses expiry rather than the
+older mandatory EF_FINISH propagation model.
+
+
+6. MOBILITY AND EMERGENCY DETECTION
+
+Mobile nodes request data through the UART command interface:
+
+    REQ_LOC
+
+The Cooja scenario script replies with a record in the following form:
+
+    LOC <node_id> <x_dm> <y_dm> <timestamp_ms>
+
+The mobile firmware derives speed and direction from successive samples.
+Harsh braking is detected from a sufficiently large speed reduction. The
+current evaluated configuration uses:
+
+    HB_THR_DMPS2 = 40
+    EF_TTL_MS = 2000
+    EF_TX_MIN_MS = 1000
+    EF_LED_FORCE_MS = 5000
+
+The red LED may remain visibly asserted for the configured force window,
+independently of the shorter protocol-state lifetime.
+
+The hardware validation did not include GNSS input. It verified firmware
+execution, IEEE 802.15.4 communication, frame handling, and
+acknowledgement behaviour, but not mobility-driven emergency detection.
+
+
+7. BOUNDED GOSSIP AND PEER SELECTION
+
+BGKP does not establish end-to-end routes. DATA dissemination uses local
+broadcast, bounded retransmission, acknowledgement feedback, and a small
+preferred-peer list.
+
+Each mobile node maintains two preferred-peer slots. Candidates are
+observed during an acknowledgement window. Candidate acceptance uses
+local criteria such as movement-direction similarity. A peer remains in
+the list until it misses the configured number of complete message
+cycles.
+
+The current evaluated defaults are:
+
+    BGKP_T_QUERY_MS = 2000
+    BGKP_T_DATA_MS = 1000
+    BGKP_T_LOCATION_MS = 1000
+    BGKP_T_GOSSIP_MS = 2500
+    BGKP_FANOUT_DATA = 3
+    BGKP_FANOUT_EF = 3
+    BGKP_JITTER_MS = 100
+    BGKP_DEDUP_MAX = 64
+    BGKP_UNICAST_RETRIES = 3
+    BGKP_FRIEND_RETRIES = 3
+    FRIEND_MISS_LIMIT = 3
+    BGKP_DATA_TTL_DEFAULT = 3
+
+The exact interpretation of a retry constant must follow the current
+firmware implementation. In the evaluated code, the constants represent
+the bounded transmission cycle used by the relevant sender context.
+
+
+8. DUPLICATE CONTROL
+
+Nodes maintain a fixed-size duplicate table keyed by message identity.
+The current maximum is 64 entries. Duplicate detection prevents repeated
+processing and constrains rebroadcast behaviour.
+
+Duplicate control is local. It does not require global coordination or a
+network-wide message registry.
+
+
+9. STORE-CARRY-FORWARD BUFFER
+
+A mobile node stores compact records rather than complete wire frames.
+The frame is rebuilt when the record is forwarded or flushed to an RSU.
+This reduces storage cost and preserves the original message identity and
+mobility metrics.
+
+The current configured carry capacity is:
+
+    BGKP_CARRY_MAX_ITEMS = 16
+
+When capacity is exhausted, the oldest record is evicted. The current
+evaluated mobile implementation does not gossip an evicted record before
+overwriting it. Memory use therefore remains bounded, but information
+may be lost under sustained buffer pressure.
+
+When an RSU becomes available, stored records are rebuilt as BGKP frames
+and sent to the RSU. A record is removed after the corresponding
+acknowledgement is processed.
+
+
+10. TIMING AND RSU VISIBILITY
+
+A mobile sends QUERY messages every 2000 ms in the evaluated
+configuration. RSU visibility is inferred from acknowledgement activity.
+The current mobile implementation uses an epoch-based missed-response
+mechanism rather than the older single-query-window rule.
+
+Periodic DATA generation and location polling both use 1000 ms periods.
+Disconnected gossip activity uses a 2500 ms period.
+
+
+11. METRICS AND OBSERVABILITY
+
+When BGKP_METRIC_LOG_ENABLED is set, the firmware emits structured METR
+records through UART. These records support calculation of:
+
+- created and RSU-delivered messages;
+- packet delivery ratio;
+- end-to-end latency;
+- transmissions by message type;
+- buffer insertion, removal, and eviction;
+- emergency creation, reception, forwarding, and convergence.
+
+The post-processing pipeline uses metrics_parser.py to process simulation
+logs and GraphsFromBatch.py to produce combined summaries, CSV files, and
+plots.
+
+Diagnostic output and preferred-peer monitoring are controlled by
+separate build-time flags so that verbose logging can be disabled during
+normal experiments.
+
+
+12. SIMULATION ENVIRONMENTS
+
+12.1 Urban scenario
+
+Urban mobility is produced from OpenStreetMap road data and SUMO traffic
+traces. Floating Car Data is converted into Cooja-compatible mobility
+records. A Cooja script exposes the current trace position and timestamp
+to firmware through the UART REQ_LOC/LOC interface.
+
+The final urban evaluation uses six fixed RSUs and mobile-node densities
+from 10 to 90 vehicles. The generated 100-vehicle assets are retained,
+but that run was excluded from the final comparative interpretation.
+
+12.2 Highway scenario
+
+The highway environment is generated directly by a Cooja script. Mobile
+nodes travel along a simplified bidirectional linear route, while six
+RSUs are distributed along the 5 km environment. Mobile-node density is
+varied from 10 to 100 vehicles.
+
+Both environments use the same UART location interface, allowing the
+firmware to remain independent of the mobility source.
+
+
+13. HARDWARE IMPLEMENTATION
+
+The preliminary hardware port targets TI SimpleLink CC1352R LaunchPad
+boards running Contiki-NG. The repository contains BGKP mobile and RSU
+firmware plus a platform adaptation layer.
+
+The hardware validation demonstrates:
+
+- successful firmware execution on the boards;
+- IEEE 802.15.4 communication through the SimpleLink radio;
+- QUERY and DATA handling;
+- acknowledgement generation and processing;
+- UART-based observation of protocol activity.
+
+The hardware work is a functional proof of portability, not a complete
+quantitative hardware evaluation. Location-aware operation and
+mobility-triggered harsh-braking detection were not validated because a
+GNSS input source was unavailable.
+
+
+14. BASELINE IMPLEMENTATIONS
+
+FLUD
+    Flooding UDP baseline. It rebroadcasts newly observed DATA and
+    EMERGENCY messages up to a configured hop limit and uses a compact
+    seen-message table for duplicate suppression.
+
+DUMB
+    Direct Unicast Minimal Beaconing baseline. It retains the common
+    timing and location interface with minimal carry capacity, no
+    adaptive gossip fanout, and a simpler acknowledgement-based delivery
+    strategy.
+
+The baselines are evaluated under the same scenario inputs as BGKP. They
+must not be described as BGKP firmware versions.
+
+
+15. SECURITY AND LIMITATIONS
+
+The present implementation does not provide application-level
+authentication, confidentiality, malicious-node detection, or protection
+against forged emergency messages.
+
+The Cooja evaluation uses an abstract IEEE 802.15.4 radio model and does
+not reproduce all real-world fading, shadowing, interference, or V2X
+stack behaviour.
+
+The completed experiment set contains one run for each
+scenario/protocol/density combination and does not quantify run-to-run
+variance.
+
+The implementation is a research prototype and is not a production-ready
+or safety-certified V2X system.
+
+
+16. CURRENT RESULTS POSITIONING
+
+The evaluation shows scenario-dependent trade-offs:
+
+- BGKP provides the highest RSU-delivered DATA ratio across the evaluated
+  urban densities.
+- This urban delivery benefit is accompanied by substantially higher
+  latency and absolute transmission overhead.
+- BGKP's highway delivery advantage is limited to the lowest densities.
+- FLUD generally provides faster emergency convergence in the highway
+  scenario.
+- BGKP should therefore be understood as a bounded, fragmentation-aware
+  trade-off design rather than a universally dominant dissemination
+  protocol.
+
+
+17. SOURCE OF TRUTH
+
+For implementation details, the current source files are authoritative:
+
+- FW/Cooja/BGKP/bgkp_common.h
+- FW/Cooja/BGKP/bgkp_protocol.h
+- FW/Cooja/BGKP/mbl.c
+- FW/Cooja/BGKP/rsu.c
+- FW/CC1352R-Launchpad/BGKP/
+
+This document supersedes the earlier "System Design [EN] v0.0.1.txt"
+description. Obsolete statements removed from the earlier version
+include the old WSAN framing description, temperature and battery DATA
+payload, 3000 ms query period, 64-item carry cache, mandatory FINISH
+avalanche, and the earlier simplified QUERY and ACK payload descriptions.

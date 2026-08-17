@@ -1,0 +1,548 @@
+================================================== 
+Batch run started: 23/05/2026  1:07:15.60
+Working dir: C:\Users\Boris\Documents\AUT\Project\Logs\Highway
+==================================================
+
+--------------------------------------------------
+FILE: Highway_BGKP_100_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_100_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   35801
+Delivered: 9188
+PDR:       0.2566
+EMG:       create=5146 rx=37368
+EMG latency (ms): t50=383 t90=1023 t99=2539
+Latency (ms): avg=4350.7 p50=601.0 p90=15687.2 min=0 max=115985
+TX total: mbl=1454500 rsu=257063 all=1711563
+Overhead (TX/delivered): 186.28
+TX breakdown (MBL): d=813086 a=243833 q=57053 e=340528
+TX breakdown (RSU): a=246054 e=11009
+BUF: avg_last=13.78 max_seen=16 put=136387 rm=83498 ev=83694
+
+--------------------------------------------------
+FILE: Highway_BGKP_10_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   155
+Delivered: 109
+PDR:       0.7032
+EMG:       create=28 rx=48
+EMG latency (ms): t50=164 t90=586 t99=618
+Latency (ms): avg=16021.4 p50=15164.0 p90=31202.6 min=23 max=47359
+TX total: mbl=30528 rsu=28304 all=58832
+Overhead (TX/delivered): 539.74
+TX breakdown (MBL): d=23981 a=255 q=5700 e=592
+TX breakdown (RSU): a=28261 e=43
+BUF: avg_last=0.31 max_seen=16 put=11272 rm=26650 ev=56
+
+--------------------------------------------------
+FILE: Highway_BGKP_20_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   472
+Delivered: 363
+PDR:       0.7691
+EMG:       create=47 rx=115
+EMG latency (ms): t50=164 t90=774 t99=805
+Latency (ms): avg=14618.9 p50=13094.0 p90=30673.2 min=0 max=40875
+TX total: mbl=63387 rsu=56609 all=119996
+Overhead (TX/delivered): 330.57
+TX breakdown (MBL): d=49941 a=1000 q=11401 e=1045
+TX breakdown (RSU): a=56533 e=76
+BUF: avg_last=0.78 max_seen=16 put=22427 rm=53545 ev=203
+
+--------------------------------------------------
+FILE: Highway_BGKP_30_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   1601
+Delivered: 620
+PDR:       0.3873
+EMG:       create=260 rx=931
+EMG latency (ms): t50=282 t90=750 t99=1039
+Latency (ms): avg=9746.4 p50=2722.5 p90=29452.4 min=7 max=47032
+TX total: mbl=160156 rsu=106091 all=266247
+Overhead (TX/delivered): 429.43
+TX breakdown (MBL): d=124231 a=4897 q=17101 e=13927
+TX breakdown (RSU): a=105610 e=481
+BUF: avg_last=2.33 max_seen=16 put=33794 rm=78754 ev=1741
+
+--------------------------------------------------
+FILE: Highway_BGKP_40_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   7460
+Delivered: 2433
+PDR:       0.3261
+EMG:       create=921 rx=3532
+EMG latency (ms): t50=258 t90=743 t99=1180
+Latency (ms): avg=7627.0 p50=696.0 p90=24373.6 min=0 max=72969
+TX total: mbl=318298 rsu=144205 all=462503
+Overhead (TX/delivered): 190.10
+TX breakdown (MBL): d=224989 a=26609 q=22810 e=43890
+TX breakdown (RSU): a=142655 e=1550
+BUF: avg_last=6.85 max_seen=16 put=43468 rm=81872 ev=9004
+
+--------------------------------------------------
+FILE: Highway_BGKP_50_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   12020
+Delivered: 3596
+PDR:       0.2992
+EMG:       create=1675 rx=8159
+EMG latency (ms): t50=305 t90=797 t99=1985
+Latency (ms): avg=6390.2 p50=632.5 p90=21992.5 min=0 max=72508
+TX total: mbl=551327 rsu=182758 all=734085
+Overhead (TX/delivered): 204.14
+TX breakdown (MBL): d=367670 a=55050 q=28516 e=100091
+TX breakdown (RSU): a=179400 e=3358
+BUF: avg_last=9.20 max_seen=16 put=57720 rm=84026 ev=19250
+
+--------------------------------------------------
+FILE: Highway_BGKP_60_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   16570
+Delivered: 5163
+PDR:       0.3116
+EMG:       create=2370 rx=11454
+EMG latency (ms): t50=290 t90=774 t99=1391
+Latency (ms): avg=6392.2 p50=640.0 p90=21620.4 min=0 max=67578
+TX total: mbl=735979 rsu=225639 all=961618
+Overhead (TX/delivered): 186.25
+TX breakdown (MBL): d=485886 a=76879 q=34226 e=138988
+TX breakdown (RSU): a=220752 e=4887
+BUF: avg_last=10.47 max_seen=16 put=69591 rm=87990 ev=26422
+
+--------------------------------------------------
+FILE: Highway_BGKP_70_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   21486
+Delivered: 6469
+PDR:       0.3011
+EMG:       create=2970 rx=18080
+EMG latency (ms): t50=328 t90=882 t99=2375
+Latency (ms): avg=5194.7 p50=555.0 p90=18987.8 min=0 max=80024
+TX total: mbl=937315 rsu=229105 all=1166420
+Overhead (TX/delivered): 180.31
+TX breakdown (MBL): d=585999 a=123707 q=39924 e=187685
+TX breakdown (RSU): a=222956 e=6149
+BUF: avg_last=11.79 max_seen=16 put=86399 rm=85832 ev=41902
+
+--------------------------------------------------
+FILE: Highway_BGKP_80_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   25953
+Delivered: 7328
+PDR:       0.2824
+EMG:       create=3779 rx=25456
+EMG latency (ms): t50=359 t90=953 t99=3031
+Latency (ms): avg=4943.2 p50=571.0 p90=17723.5 min=0 max=59820
+TX total: mbl=1121196 rsu=238277 all=1359473
+Overhead (TX/delivered): 185.52
+TX breakdown (MBL): d=663074 a=159593 q=45641 e=252888
+TX breakdown (RSU): a=230213 e=8064
+BUF: avg_last=12.59 max_seen=16 put=104469 rm=85100 ev=56785
+
+--------------------------------------------------
+FILE: Highway_BGKP_90_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_BGKP_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   30880
+Delivered: 7868
+PDR:       0.2548
+EMG:       create=4462 rx=35336
+EMG latency (ms): t50=415 t90=1118 t99=2641
+Latency (ms): avg=4515.4 p50=531.5 p90=16734.3 min=0 max=62594
+TX total: mbl=1316008 rsu=233973 all=1549981
+Overhead (TX/delivered): 197.00
+TX breakdown (MBL): d=740016 a=210531 q=51350 e=314111
+TX breakdown (RSU): a=224359 e=9614
+BUF: avg_last=13.21 max_seen=16 put=124707 rm=81588 ev=76971
+
+--------------------------------------------------
+FILE: Highway_DUMB_100_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_100_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   76867
+Delivered: 26356
+PDR:       0.3429
+EMG:       create=1488 rx=12953
+EMG latency (ms): t50=344 t90=852 t99=1211
+Latency (ms): avg=329.4 p50=289.0 p90=641.0 min=0 max=1961
+TX total: mbl=184175 rsu=112466 all=296641
+Overhead (TX/delivered): 11.26
+TX breakdown (MBL): d=82356 a=20503 q=57082 e=24234
+TX breakdown (RSU): a=111315 e=1151
+BUF: avg_last=0.00 max_seen=0 put=0 rm=82339 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_10_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   11584
+Delivered: 4557
+PDR:       0.3934
+EMG:       create=14 rx=18
+EMG latency (ms): t50=94 t90=164 t99=265
+Latency (ms): avg=350.6 p50=273.0 p90=578.0 min=0 max=727
+TX total: mbl=23429 rsu=22885 all=46314
+Overhead (TX/delivered): 10.16
+TX breakdown (MBL): d=17642 a=32 q=5700 e=55
+TX breakdown (RSU): a=22871 e=14
+BUF: avg_last=0.00 max_seen=0 put=0 rm=22625 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_20_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   23361
+Delivered: 14255
+PDR:       0.6102
+EMG:       create=70 rx=137
+EMG latency (ms): t50=94 t90=507 t99=726
+Latency (ms): avg=344.7 p50=274.0 p90=695.0 min=0 max=1437
+TX total: mbl=48511 rsu=47351 all=95862
+Overhead (TX/delivered): 6.72
+TX breakdown (MBL): d=36535 a=234 q=11403 e=339
+TX breakdown (RSU): a=47287 e=64
+BUF: avg_last=0.00 max_seen=0 put=0 rm=47013 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_30_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   33817
+Delivered: 19486
+PDR:       0.5762
+EMG:       create=148 rx=457
+EMG latency (ms): t50=226 t90=719 t99=976
+Latency (ms): avg=343.2 p50=313.0 p90=672.0 min=0 max=1312
+TX total: mbl=71174 rsu=67466 all=138640
+Overhead (TX/delivered): 7.11
+TX breakdown (MBL): d=52347 a=694 q=17104 e=1029
+TX breakdown (RSU): a=67343 e=123
+BUF: avg_last=0.00 max_seen=0 put=0 rm=63274 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_40_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   39569
+Delivered: 22276
+PDR:       0.5630
+EMG:       create=386 rx=2029
+EMG latency (ms): t50=273 t90=727 t99=1008
+Latency (ms): avg=310.4 p50=273.0 p90=625.0 min=0 max=1617
+TX total: mbl=85581 rsu=72609 all=158190
+Overhead (TX/delivered): 7.10
+TX breakdown (MBL): d=55566 a=3187 q=22807 e=4021
+TX breakdown (RSU): a=72301 e=308
+BUF: avg_last=0.00 max_seen=0 put=0 rm=64511 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_50_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   48403
+Delivered: 22991
+PDR:       0.4750
+EMG:       create=413 rx=2067
+EMG latency (ms): t50=226 t90=680 t99=922
+Latency (ms): avg=289.7 p50=219.0 p90=579.0 min=0 max=1782
+TX total: mbl=103602 rsu=89154 all=192756
+Overhead (TX/delivered): 8.38
+TX breakdown (MBL): d=67850 a=3117 q=28520 e=4115
+TX breakdown (RSU): a=88869 e=285
+BUF: avg_last=0.00 max_seen=0 put=0 rm=75001 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_60_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   54653
+Delivered: 26852
+PDR:       0.4913
+EMG:       create=734 rx=4807
+EMG latency (ms): t50=274 t90=726 t99=1070
+Latency (ms): avg=306.6 p50=235.0 p90=648.0 min=0 max=2078
+TX total: mbl=122502 rsu=96912 all=219414
+Overhead (TX/delivered): 8.17
+TX breakdown (MBL): d=72332 a=6904 q=34231 e=9035
+TX breakdown (RSU): a=96358 e=554
+BUF: avg_last=0.00 max_seen=0 put=0 rm=75761 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_70_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   62512
+Delivered: 26294
+PDR:       0.4206
+EMG:       create=717 rx=4498
+EMG latency (ms): t50=281 t90=735 t99=1015
+Latency (ms): avg=282.9 p50=265.0 p90=579.0 min=0 max=1703
+TX total: mbl=136684 rsu=108348 all=245032
+Overhead (TX/delivered): 9.32
+TX breakdown (MBL): d=81508 a=6743 q=39942 e=8491
+TX breakdown (RSU): a=107834 e=514
+BUF: avg_last=0.00 max_seen=0 put=0 rm=84658 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_80_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   65228
+Delivered: 25182
+PDR:       0.3861
+EMG:       create=1039 rx=6758
+EMG latency (ms): t50=281 t90=727 t99=1071
+Latency (ms): avg=303.6 p50=265.0 p90=625.0 min=0 max=2352
+TX total: mbl=146056 rsu=105295 all=251351
+Overhead (TX/delivered): 9.98
+TX breakdown (MBL): d=76206 a=10969 q=45656 e=13225
+TX breakdown (RSU): a=104592 e=703
+BUF: avg_last=0.00 max_seen=0 put=0 rm=76478 ev=0
+
+--------------------------------------------------
+FILE: Highway_DUMB_90_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_DUMB_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   72737
+Delivered: 27450
+PDR:       0.3774
+EMG:       create=1402 rx=10221
+EMG latency (ms): t50=304 t90=789 t99=1125
+Latency (ms): avg=308.2 p50=258.0 p90=618.7 min=0 max=1852
+TX total: mbl=171264 rsu=116077 all=287341
+Overhead (TX/delivered): 10.47
+TX breakdown (MBL): d=83696 a=16816 q=51378 e=19374
+TX breakdown (RSU): a=115061 e=1016
+BUF: avg_last=0.00 max_seen=0 put=0 rm=83546 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_100_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_100_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   47698
+Delivered: 13409
+PDR:       0.2811
+EMG:       create=4015 rx=41986
+EMG latency (ms): t50=70 t90=273 t99=617
+Latency (ms): avg=354.9 p50=313.0 p90=703.0 min=0 max=1391
+TX total: mbl=496488 rsu=0 all=496488
+Overhead (TX/delivered): 37.03
+TX breakdown (MBL): d=452344 a=0 q=0 e=44144
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_10_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_10_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   4760
+Delivered: 580
+PDR:       0.1218
+EMG:       create=252 rx=78
+EMG latency (ms): t50=234 t90=531 t99=711
+Latency (ms): avg=271.7 p50=242.0 p90=547.0 min=0 max=773
+TX total: mbl=6201 rsu=0 all=6201
+Overhead (TX/delivered): 10.69
+TX breakdown (MBL): d=5881 a=0 q=0 e=320
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_20_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_20_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   9525
+Delivered: 1417
+PDR:       0.1488
+EMG:       create=693 rx=604
+EMG latency (ms): t50=211 t90=461 t99=695
+Latency (ms): avg=313.3 p50=266.0 p90=602.0 min=0 max=805
+TX total: mbl=18099 rsu=0 all=18099
+Overhead (TX/delivered): 12.77
+TX breakdown (MBL): d=16816 a=0 q=0 e=1283
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_30_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_30_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   14295
+Delivered: 2141
+PDR:       0.1498
+EMG:       create=1040 rx=1460
+EMG latency (ms): t50=195 t90=500 t99=836
+Latency (ms): avg=321.7 p50=273.0 p90=664.0 min=0 max=906
+TX total: mbl=35887 rsu=0 all=35887
+Overhead (TX/delivered): 16.76
+TX breakdown (MBL): d=33477 a=0 q=0 e=2410
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_40_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_40_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   19065
+Delivered: 3092
+PDR:       0.1622
+EMG:       create=1452 rx=2837
+EMG latency (ms): t50=164 t90=484 t99=773
+Latency (ms): avg=306.2 p50=266.0 p90=633.0 min=0 max=883
+TX total: mbl=59076 rsu=0 all=59076
+Overhead (TX/delivered): 19.11
+TX breakdown (MBL): d=54923 a=0 q=0 e=4153
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_50_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_50_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   23835
+Delivered: 4177
+PDR:       0.1752
+EMG:       create=1844 rx=6338
+EMG latency (ms): t50=117 t90=336 t99=672
+Latency (ms): avg=308.6 p50=266.0 p90=625.0 min=0 max=4773
+TX total: mbl=107182 rsu=0 all=107182
+Overhead (TX/delivered): 25.66
+TX breakdown (MBL): d=99341 a=0 q=0 e=7841
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_60_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_60_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   28605
+Delivered: 5635
+PDR:       0.1970
+EMG:       create=2445 rx=10235
+EMG latency (ms): t50=94 t90=406 t99=758
+Latency (ms): avg=308.1 p50=266.0 p90=641.0 min=0 max=4625
+TX total: mbl=145922 rsu=0 all=145922
+Overhead (TX/delivered): 25.90
+TX breakdown (MBL): d=133663 a=0 q=0 e=12259
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_70_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_70_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   33375
+Delivered: 6793
+PDR:       0.2035
+EMG:       create=2306 rx=12734
+EMG latency (ms): t50=101 t90=351 t99=601
+Latency (ms): avg=302.2 p50=266.0 p90=625.0 min=0 max=4227
+TX total: mbl=205043 rsu=0 all=205043
+Overhead (TX/delivered): 30.18
+TX breakdown (MBL): d=190589 a=0 q=0 e=14454
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_80_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_80_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   38150
+Delivered: 8518
+PDR:       0.2233
+EMG:       create=2758 rx=16892
+EMG latency (ms): t50=101 t90=313 t99=648
+Latency (ms): avg=317.7 p50=273.0 p90=648.0 min=0 max=2008
+TX total: mbl=267117 rsu=0 all=267117
+Overhead (TX/delivered): 31.36
+TX breakdown (MBL): d=248308 a=0 q=0 e=18809
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+--------------------------------------------------
+FILE: Highway_FLUD_90_output.txt
+TIME: 23/05/2026  1:07:15.64
+CMD : python metrics_parser.py "Highway_FLUD_90_output.txt"
+--------------------------------------------------
+=== Final Metrics ===
+Created:   42930
+Delivered: 10533
+PDR:       0.2454
+EMG:       create=3208 rx=23382
+EMG latency (ms): t50=86 t90=297 t99=625
+Latency (ms): avg=335.4 p50=289.0 p90=672.0 min=0 max=2398
+TX total: mbl=351291 rsu=0 all=351291
+Overhead (TX/delivered): 33.35
+TX breakdown (MBL): d=325558 a=0 q=0 e=25733
+TX breakdown (RSU): a=0 e=0
+BUF: avg_last=0.00 max_seen=0 put=0 rm=0 ev=0
+
+==================================================
+Batch run finished: 23/05/2026  1:07:30.35
+==================================================

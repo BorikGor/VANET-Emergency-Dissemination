@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-05-15T16:12:21.382207+12:00 by Eclipse SUMO sumo 1.26.0
+-->
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="../net/wynyard.net.xml"/>
+        <route-files value="../Routes/loop_routes_only.rou.xml,../Routes/80_vehicles.rou.xml"/>
+    </input>
+
+</sumoConfiguration>
