@@ -1,4 +1,3 @@
-@'
 # VANET Emergency Dissemination
 
 Design and experimental evaluation of message dissemination protocols
