@@ -139,6 +139,3 @@ variance.
 Boris Gor  
 Master of Engineering  
 Auckland University of Technology
-'@ | Set-Content `
-    -LiteralPath ".\README.md" `
-    -Encoding utf8
